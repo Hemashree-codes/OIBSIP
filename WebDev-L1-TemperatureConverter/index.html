@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple temperature converter">
+    <title>TempFlow | Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="#">Temp<span>Flow.</span></a>
+        <p>Temperature Converter</p>
+    </header>
+
+    <main class="container">
+        <section class="converter">
+            <p class="eyebrow">QUICK • SIMPLE • ACCURATE</p>
+            <h1>Convert temperature<span>.</span></h1>
+            <p class="description">
+                Convert between Celsius, Fahrenheit, and Kelvin in seconds.
+            </p>
+
+            <form id="converterForm">
+                <label for="temperature">Enter temperature</label>
+                <input
+                    type="number"
+                    id="temperature"
+                    placeholder="e.g. 25"
+                    step="any"
+                    required
+                >
+
+                <label for="fromUnit">Convert from</label>
+                <select id="fromUnit">
+                    <option value="C">Celsius (°C)</option>
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+
+                <label for="toUnit">Convert to</label>
+                <select id="toUnit">
+                    <option value="F">Fahrenheit (°F)</option>
+                    <option value="C">Celsius (°C)</option>
+                    <option value="K">Kelvin (K)</option>
+                </select>
+
+                <button type="submit">Convert Temperature</button>
+                <button type="button" id="resetButton" class="reset">
+                    Reset
+                </button>
+            </form>
+
+            <div id="result" class="result" aria-live="polite">
+                <p>Your result will appear here.</p>
+            </div>
+        </section>
+
+        <p class="footer">Built with HTML, CSS and JavaScript · 2026</p>
+    </main>
+</body>
+</html>
