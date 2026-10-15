@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecureSpace | Login & Register</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="page">
+        <section class="auth-card">
+            <div class="brand-icon">S</div>
+            <p class="eyebrow">WELCOME TO SECURESPACE</p>
+            <h1 id="pageTitle">Welcome back</h1>
+            <p class="subtitle" id="pageSubtitle">
+                Sign in to continue to your account.
+            </p>
+
+            <div class="tabs">
+                <button type="button" id="loginTab" class="tab active">
+                    Login
+                </button>
+                <button type="button" id="registerTab" class="tab">
+                    Register
+                </button>
+            </div>
+
+            <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+
+            <form id="loginForm">
+                <label for="loginEmail">Email address</label>
+                <input
+                    type="email"
+                    id="loginEmail"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="loginPassword">Password</label>
+                <input
+                    type="password"
+                    id="loginPassword"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                    minlength="8"
+                >
+
+                <button type="submit" class="primary-btn">Sign In</button>
+
+                <p class="switch-text">
+                    New here?
+                    <button type="button" class="inline-btn" id="showRegister">
+                        Create an account
+                    </button>
+                </p>
+            </form>
+
+            <form id="registerForm" hidden>
+                <label for="fullName">Full name</label>
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Your name"
+                    autocomplete="name"
+                    minlength="2"
+                    maxlength="60"
+                    required
+                >
+
+                <label for="registerEmail">Email address</label>
+                <input
+                    type="email"
+                    id="registerEmail"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="registerPassword">Create password</label>
+                <input
+                    type="password"
+                    id="registerPassword"
+                    placeholder="At least 8 characters"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+                <label for="confirmPassword">Confirm password</label>
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Re-enter password"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+                <button type="submit" class="primary-btn">
+                    Create Account
+                </button>
+
+                <p class="switch-text">
+                    Already registered?
+                    <button type="button" class="inline-btn" id="showLogin">
+                        Sign in
+                    </button>
+                </p>
+            </form>
+
+            <section id="dashboard" hidden>
+                <div class="success-icon">✓</div>
+                <h2 id="dashboardTitle">You're signed in!</h2>
+                <p id="dashboardMessage" class="subtitle"></p>
+                <button type="button" id="logoutBtn" class="primary-btn">
+                    Sign Out
+                </button>
+            </section>
+
+            <p class="security-note">
+                Front-end demonstration project · Not for real accounts
+            </p>
+        </section>
+    </main>
+</body>
+</html>
