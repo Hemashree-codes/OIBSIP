@@ -1,1 +1,56 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcify | Smart Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="calculator">
+    <header>
+      <p class="eyebrow">SMART CALCULATOR</p>
+      <h1>Calcify<span>.</span></h1>
+      <p class="subtitle">Simple calculations, beautifully done.</p>
+    </header>
+
+    <section class="display" aria-label="Calculator display">
+      <div id="expression" class="expression">Ready to calculate</div>
+      <output id="result" aria-live="polite">0</output>
+    </section>
+
+    <div class="keys" id="keys">
+      <button type="button" data-action="clear" class="utility">AC</button>
+      <button type="button" data-action="backspace" class="utility">⌫</button>
+      <button type="button" data-operator="/" class="operator">÷</button>
+      <button type="button" data-operator="*" class="operator">×</button>
+
+      <button type="button" data-number="7">7</button>
+      <button type="button" data-number="8">8</button>
+      <button type="button" data-number="9">9</button>
+      <button type="button" data-operator="-" class="operator">−</button>
+
+      <button type="button" data-number="4">4</button>
+      <button type="button" data-number="5">5</button>
+      <button type="button" data-number="6">6</button>
+      <button type="button" data-operator="+" class="operator">+</button>
+
+      <button type="button" data-number="1">1</button>
+      <button type="button" data-number="2">2</button>
+      <button type="button" data-number="3">3</button>
+      <button type="button" data-action="equals" class="equals">=</button>
+
+      <button type="button" data-action="sign">+/−</button>
+      <button type="button" data-number="0">0</button>
+      <button type="button" data-action="decimal">.</button>
+    </div>
+
+    <p id="message" role="status"></p>
+    <footer>Made with HTML, CSS &amp; JavaScript</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
